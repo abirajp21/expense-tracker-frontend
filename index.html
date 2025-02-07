@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>
+            Expense Tracker
+        </h1>
+    </header>
+
+    <div id="input-div">
+
+        <input type="text" name="name" id="expense-name" class="input-box" required autocomplete placeholder="Expense Name">
+        <input type="number" name="amount" id="amount"  class="input-box" required placeholder="Amount">
+        <select name="category" id="category" class="input-box" required>
+            <option value="">Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Health">Health</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Education">Education</option>
+        </select>
+        <input type="date" name="date" id="date" class="input-box">
+        <button type="button" id="add-btn">Add Expense</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Expense Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="expense-list">
+        </tbody>
+    </table>
+    
+    <div id="filter-div">
+        <p><b>Total:</b> ₹<span id="total-amount">0</span> </p>
+        <label for="filter-category">Filter by Category:
+            <select name="" id="filter-category">
+                <option value="all">All</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Health">Health</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Education">Education</option>
+            </select>
+        </label>
+    </div>
+    
+</body>
+</html>
